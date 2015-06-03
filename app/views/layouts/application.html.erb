@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Pinfall Bowling</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <link href='http://fonts.googleapis.com/css?family=Josefin+Sans|Gafata|Roboto|Satisfy|Montserrat' rel='stylesheet' type='text/css'>
+
+  <%= csrf_meta_tags %>
+</head>
+<body>
+	<script>
+	  window.fbAsyncInit = function() {
+	    FB.init({
+	      appId      : '1433728790269829',
+	      xfbml      : true,
+	      version    : 'v2.3'
+	    });
+	  };
+
+	  (function(d, s, id){
+	     var js, fjs = d.getElementsByTagName(s)[0];
+	     if (d.getElementById(id)) {return;}
+	     js = d.createElement(s); js.id = id;
+	     js.src = "//connect.facebook.net/en_US/sdk.js";
+	     fjs.parentNode.insertBefore(js, fjs);
+	   }(document, 'script', 'facebook-jssdk'));
+	</script>
+
+	<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+<!-- Start header -->
+<div class="header_wrapper">
+    <div class="header">
+        <!-- Start navigation menu -->
+        <div id="nav_wrapper">
+            <div id="nav">
+                <ul class="fontmontserrat">
+                    <li><a href="">Sign In</a></li>
+                    <li><a href="">About</a></li>
+                    <li><a href="">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- End navigation menu -->
+    </div>
+</div>
+<!-- End header -->
+
+
+<%= yield %>
+
+<!-- Start footer -->
+    <div class="footer_wrapper fontjosefinsans">
+        <div class="footer">
+            <!-- Start Social -->
+            <div style="display:inline-block;float:left;">
+
+                <h3>Follow Pinfall</h3>
+  
+				<div class="fb-like" data-href="https://www.facebook.com/pinfallbowling" data-layout="button" data-action="like" data-show-faces="false" data-share="true"></div>               
+                <div style="padding-top: 5px">
+                	<a href="https://twitter.com/DrewHust" class="twitter-follow-button" data-show-count="false">Follow @DrewHust</a>
+            	</div>
+            	
+
+            
+            </div>
+            <!-- End Social -->
+            <!-- Start Copyright/Navigation -->
+            <div id="legal">
+                <p>&copy Andrew Hust, 2015</p>
+                <!-- <p><a href="./about.php">About</a> | <a href="">Privacy Policy</a> | <a href="">Terms Of Use</a></p> -->
+            </div>
+            <!-- End Copyright/Navigation -->
+        </div>
+    </div>
+    <!-- End footer -->
+</body>
+</html>
