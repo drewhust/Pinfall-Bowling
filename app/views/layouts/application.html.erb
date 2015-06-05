@@ -7,9 +7,59 @@
   <link href='http://fonts.googleapis.com/css?family=Josefin+Sans|Gafata|Roboto|Satisfy|Montserrat' rel='stylesheet' type='text/css'>
 
   <%= csrf_meta_tags %>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-	<script>
+        <!-- Start navigation menu -->
+        <nav class="navbar navbar-default navbar-fixed-top">
+		  <div class="container">
+		    <!-- Brand and toggle get grouped for better mobile display -->
+		    <div class="navbar-header">
+		      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+		        <span class="sr-only">Toggle navigation</span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		      </button>
+		      <a class="navbar-brand fontsatisfy" href="#">Pinfall</a>
+		    </div>
+		    <!-- Collect the nav links, forms, and other content for toggling -->
+		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		      <ul class="nav navbar-nav navbar-right">
+		        <li><button type="button" class="btn btn-success navbar-btn">Sign in</button></li>
+		      </ul>
+		    </div><!-- /.navbar-collapse -->
+		  </div><!-- /.container-fluid -->
+		</nav>
+        <!-- End navigation menu -->
+
+<%= yield %>
+
+<!-- Start footer -->
+<nav class="navbar navbar-default">
+	<div class="container">
+	    <!-- Start Social -->
+	    <div class="navbar-header">
+	    	<p>Follow Pinfall</p>
+			<div class="fb-like" data-href="https://www.facebook.com/pinfallbowling" data-layout="button" data-action="like" data-show-faces="false" data-share="true"></div>           
+	        <div style="padding-top: 5px">
+	        	<a href="https://twitter.com/DrewHust" class="twitter-follow-button" data-show-count="false">Follow @DrewHust</a>
+	    	</div>
+	    </div>
+	        
+	    <!-- End Social -->
+	    <!-- Start Copyright/Navigation -->
+	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		    <ul class="nav navbar-nav navbar-right">
+		    	<li>&copy Andrew Hust, 2015.</li>
+		    </ul>
+		</div>
+	    <!-- End Copyright/Navigation -->
+    </div>
+</nav>
+<!-- End footer -->
+
+    <script>
 	  window.fbAsyncInit = function() {
 	    FB.init({
 	      appId      : '1433728790269829',
@@ -29,52 +79,5 @@
 
 	<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 
-<!-- Start header -->
-<div class="header_wrapper">
-    <div class="header">
-        <!-- Start navigation menu -->
-        <div id="nav_wrapper">
-            <div id="nav">
-                <ul class="fontmontserrat">
-                    <li><a href="">Sign In</a></li>
-                    <li><a href="">About</a></li>
-                    <li><a href="">Contact</a></li>
-                </ul>
-            </div>
-        </div>
-        <!-- End navigation menu -->
-    </div>
-</div>
-<!-- End header -->
-
-
-<%= yield %>
-
-<!-- Start footer -->
-    <div class="footer_wrapper fontjosefinsans">
-        <div class="footer">
-            <!-- Start Social -->
-            <div style="display:inline-block;float:left;">
-
-                <h3>Follow Pinfall</h3>
-  
-				<div class="fb-like" data-href="https://www.facebook.com/pinfallbowling" data-layout="button" data-action="like" data-show-faces="false" data-share="true"></div>               
-                <div style="padding-top: 5px">
-                	<a href="https://twitter.com/DrewHust" class="twitter-follow-button" data-show-count="false">Follow @DrewHust</a>
-            	</div>
-            	
-
-            
-            </div>
-            <!-- End Social -->
-            <!-- Start Copyright/Navigation -->
-            <div id="legal">
-                <p>&copy Andrew Hust, 2015</p>
-                <!-- <p><a href="./about.php">About</a> | <a href="">Privacy Policy</a> | <a href="">Terms Of Use</a></p> -->
-            </div>
-            <!-- End Copyright/Navigation -->
-        </div>
-    </div>
-    <!-- End footer -->
 </body>
 </html>
