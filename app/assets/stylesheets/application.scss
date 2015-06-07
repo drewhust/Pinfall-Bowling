@@ -28,6 +28,20 @@
     background: #f8f8f8;
     position: relative;
     overflow-x: hidden;
+    padding-top: 50px;
+  padding-bottom: 20px;
+}
+
+.navbar a {
+    color: white !important;
+}
+
+.navbar a:hover {
+    color: #999 !important;
+}
+
+.collapsablemenu-left {
+    margin-left:20px !important;
 }
 
 /* Start Font Styles */
